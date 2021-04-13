@@ -1,0 +1,8 @@
+c:\users\akash.chauhan\documents\visual studio 2015\Projects\Printer-console\Printer-console\bin\Debug\Printer-console.exe.config
+c:\users\akash.chauhan\documents\visual studio 2015\Projects\Printer-console\Printer-console\bin\Debug\Printer-console.exe
+c:\users\akash.chauhan\documents\visual studio 2015\Projects\Printer-console\Printer-console\bin\Debug\Printer-console.pdb
+c:\users\akash.chauhan\documents\visual studio 2015\Projects\Printer-console\Printer-console\bin\Debug\MessagePrinter-library.dll
+c:\users\akash.chauhan\documents\visual studio 2015\Projects\Printer-console\Printer-console\bin\Debug\MessagePrinter-library.pdb
+c:\users\akash.chauhan\documents\visual studio 2015\Projects\Printer-console\Printer-console\obj\Debug\Printer-console.csprojResolveAssemblyReference.cache
+c:\users\akash.chauhan\documents\visual studio 2015\Projects\Printer-console\Printer-console\obj\Debug\Printer-console.exe
+c:\users\akash.chauhan\documents\visual studio 2015\Projects\Printer-console\Printer-console\obj\Debug\Printer-console.pdb

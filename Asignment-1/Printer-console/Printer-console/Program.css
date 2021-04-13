@@ -1,0 +1,31 @@
+﻿using MessagePrinter_library;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Printer_console
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            RefClass obj = new RefClass();                  //reference to class in class-library
+            Console.WriteLine("Enter the message to be displayed : "); 
+            string message = Console.ReadLine();            //input from user, Maybe - New World
+            
+            try                                             //check for exceptions   
+            {
+                Console.WriteLine(obj.printer(message));    //calls printer method from RefClass and prints message
+            }
+            
+            catch(ArgumentException exp)                    //catches excpetion if message is empty
+            {
+                Console.WriteLine(exp); 
+            }
+                
+            Console.Read();                                 //Read command to stop console window from closing
+        }
+    }
+}

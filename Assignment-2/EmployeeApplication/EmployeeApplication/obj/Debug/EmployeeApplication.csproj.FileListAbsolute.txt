@@ -4,3 +4,5 @@ C:\C# programs\day7\Assignment-2\EmployeeApplication\EmployeeApplication\bin\Deb
 C:\C# programs\day7\Assignment-2\EmployeeApplication\EmployeeApplication\obj\Debug\EmployeeApplication.exe
 C:\C# programs\day7\Assignment-2\EmployeeApplication\EmployeeApplication\obj\Debug\EmployeeApplication.pdb
 C:\C# programs\day7\Assignment-2\EmployeeApplication\EmployeeApplication\obj\Debug\EmployeeApplication.csprojResolveAssemblyReference.cache
+C:\C# programs\day7\Assignment-2\EmployeeApplication\EmployeeApplication\bin\Debug\MainClassLibrary.dll
+C:\C# programs\day7\Assignment-2\EmployeeApplication\EmployeeApplication\bin\Debug\MainClassLibrary.pdb

@@ -2,3 +2,4 @@ C:\C# programs\day7\Assignment-2\MainClassLibrary\MainClassLibrary\bin\Debug\Mai
 C:\C# programs\day7\Assignment-2\MainClassLibrary\MainClassLibrary\bin\Debug\MainClassLibrary.pdb
 C:\C# programs\day7\Assignment-2\MainClassLibrary\MainClassLibrary\obj\Debug\MainClassLibrary.dll
 C:\C# programs\day7\Assignment-2\MainClassLibrary\MainClassLibrary\obj\Debug\MainClassLibrary.pdb
+C:\C# programs\day7\Assignment-2\MainClassLibrary\MainClassLibrary\obj\Debug\MainClassLibrary.csprojResolveAssemblyReference.cache

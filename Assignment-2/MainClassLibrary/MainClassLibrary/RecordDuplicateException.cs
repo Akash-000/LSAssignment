@@ -8,7 +8,7 @@ namespace MainClassLibrary
     {
         public RecordDuplicateException(string message)
         {
-            Console.WriteLine(message+" Already Exists And Hence Is Not Loaded");
+            Console.WriteLine(message+ Constants.DuplicateExceptionMessage);
         }
     }
 }

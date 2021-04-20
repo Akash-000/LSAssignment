@@ -7,32 +7,17 @@ namespace MainClassLibrary
     {
         public static void GetManagerName(int EmpID, List<Employee> details)
         {
-            int ManID = 0 ;
-            //Getting Employee ID of the Manager
-            foreach(var record in details)
+            var ManID = details.Find(x => x.EmpID == EmpID);
+            if(ManID.ManagerID==-1)
             {
-                if(record.EmpID == EmpID)
-                {
-                    ManID = record.ManagerID;
-                    break;
-                }
+                Console.WriteLine(Constants.TopManager);
             }
-            //Getting Employee Name from the obtained Employee ID
-            foreach(var record in details)
+            else
             {
-                if(ManID == -1)
-                {
-                    Console.WriteLine("The Given Employee Is The Top Manager");
-                    break;
-                }
-                if(ManID == record.EmpID)
-                {
-                    Console.WriteLine("The Manager is : "+record.EmpName);
-                }
+                var EmpName = details.Find(x => x.EmpID == ManID.ManagerID);
+                Console.WriteLine(EmpName.EmpName);
             }
             
-                        
-
         }
     }
 }

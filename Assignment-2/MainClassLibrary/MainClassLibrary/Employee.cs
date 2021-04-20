@@ -1,6 +1,8 @@
 ﻿namespace MainClassLibrary
 {
-    //Employee Class with required fields
+    /// <summary>
+    /// Employee class containing all the fields and property of Employee Entity
+    /// </summary>
     internal class Employee
     {
         public int EmpID { get; set; }

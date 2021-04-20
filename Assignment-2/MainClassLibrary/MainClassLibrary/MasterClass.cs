@@ -19,35 +19,33 @@ namespace MainClassLibrary
         /// </summary>
         public void ReadingCsvFile()
         {
-            //Declaring a HashSet for checking the repetition in the DataBase
-            HashSet<int> repetition = new HashSet<int>();
+            //Declaring a HashSet for checking the Repetition in the DataBase
+            HashSet<int> Repetition = new HashSet<int>();
             try
             {
-
-                string[] details = File.ReadAllLines(@"C:\C# programs\day7\Assignment-2\Record\EmployeeDetails.csv");
-
-                foreach (var record in details)
+                string[] Details = File.ReadAllLines("..\\..\\..\\..\\Record\\EmployeeDetails.csv");
+                foreach (var Record in Details)
                 {
-                    string[] fields = record.Split(',');
+                    string[] Fields = Record.Split(',');
                     //Condition to remove null anomalies
-                    if (fields[2] == "null")
-                        fields[2] = "-1";
+                    if (Fields[2] == "null")
+                        Fields[2] = "-1";
                     //Creating an employee entity using the data in DataBase
                     Employee emp = new Employee()           
                     {
-                        EmpID = int.Parse(fields[0]),
-                        EmpName = fields[1],
-                        ManagerID = int.Parse(fields[2]),
-                        EmpEmail = fields[3]
+                        EmpID = int.Parse(Fields[0]),
+                        EmpName = Fields[1],
+                        ManagerID = int.Parse(Fields[2]),
+                        EmpEmail = Fields[3]
                     };
 
-                    if (repetition.Contains(int.Parse(fields[0])))
+                    if (Repetition.Contains(int.Parse(Fields[0])))
                     {
-                        throw new RecordDuplicateException(record);
+                        throw new RecordDuplicateException(Record);
                     }
                     else
                     {
-                        repetition.Add(int.Parse(fields[0]));
+                        Repetition.Add(int.Parse(Fields[0]));
                         EmpDetails.Add(emp);
                     }
                     

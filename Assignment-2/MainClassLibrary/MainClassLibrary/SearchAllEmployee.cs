@@ -4,10 +4,10 @@ namespace MainClassLibrary
 {
     internal class SearchAllEmployee
     {
-        public static void AllEmployeeNames(List<Employee> details, int ManID)
+        public static void AllEmployeeNames(List<Employee> Details, int ManID)
         {
             List<string> Test = new List<string>();
-            var employeesworking = details.Where(emp => emp.ManagerID == ManID)
+            var employeesworking = Details.Where(emp => emp.ManagerID == ManID)
                                     .Select(emp => new
                                     {
                                         EmployeeID = emp.EmpID,

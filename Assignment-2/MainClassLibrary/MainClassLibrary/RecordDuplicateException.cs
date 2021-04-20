@@ -6,9 +6,9 @@ namespace MainClassLibrary
     [Serializable]
     internal class RecordDuplicateException : Exception
     {
-        public RecordDuplicateException(string message)
+        public RecordDuplicateException(string Message)
         {
-            Console.WriteLine(message+ Constants.DuplicateExceptionMessage);
+            Console.WriteLine(Message+ Constants.DuplicateExceptionMessage);
         }
     }
 }

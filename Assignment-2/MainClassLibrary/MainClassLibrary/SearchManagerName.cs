@@ -5,16 +5,16 @@ namespace MainClassLibrary
 {
     internal class SearchManagerName
     {
-        public static void GetManagerName(int EmpID, List<Employee> details)
+        public static void GetManagerName(int EmpID, List<Employee> Details)
         {
-            var ManID = details.Find(x => x.EmpID == EmpID);
+            var ManID = Details.Find(x => x.EmpID == EmpID);
             if(ManID.ManagerID==-1)
             {
                 Console.WriteLine(Constants.TopManager);
             }
             else
             {
-                var EmpName = details.Find(x => x.EmpID == ManID.ManagerID);
+                var EmpName = Details.Find(x => x.EmpID == ManID.ManagerID);
                 Console.WriteLine(EmpName.EmpName);
             }
             

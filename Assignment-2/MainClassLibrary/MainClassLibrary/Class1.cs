@@ -13,37 +13,43 @@ namespace MainClassLibrary
         {
             //Declaring a HashSet for checking the repetition in the DataBase
             HashSet<int> repetition = new HashSet<int>();
-
-            string[] details = File.ReadAllLines(@"C:\C# programs\day7\Assignment-2\Record\EmployeeDetails.csv");
-            
-            foreach(var record in details)
+            try
             {
-                string[] fields = record.Split(',');
-                Employee emp = new Employee()           //Creating an employee entity using the data in DataBase
+
+                string[] details = File.ReadAllLines(@"C:\C# programs\day7\Assignment-2\Record\EmployeeDetails.csv");
+
+                foreach (var record in details)
                 {
-                    EmpID = int.Parse(fields[0]),
-                    EmpName = fields[1],
-                    ManagerID = int.Parse(fields[2]),
-                    EmpEmail = fields[3]
-                };
-                try                                     //Checking for duplicate records
-                {
-                    if (repetition.Contains(int.Parse(fields[0])))
-                        throw new RecordDuplicateException(record);
-                    else
+                    string[] fields = record.Split(',');
+                    if (fields[2] == "null")
+                        fields[2] = "-1";
+                    Employee emp = new Employee()           //Creating an employee entity using the data in DataBase
                     {
-                        repetition.Add(int.Parse(fields[0]));
-                        EmpDetails.Add(emp);
-                    }
+                        EmpID = int.Parse(fields[0]),
+                        EmpName = fields[1],
+                        ManagerID = int.Parse(fields[2]),
+                        EmpEmail = fields[3]
+                    };
+                        if (repetition.Contains(int.Parse(fields[0])))
+                            throw new RecordDuplicateException(record);
+                        else
+                        {
+                            repetition.Add(int.Parse(fields[0]));
+                            EmpDetails.Add(emp);
+                        }
+                    
                 }
-                catch(RecordDuplicateException exp)
-                {
-                    Console.WriteLine(exp);
-                }    
             }
-           
-            SortEmployee.PrintSortedCollection(EmpDetails);         //Sorting the Employee Collection
-            Console.WriteLine("\nThe Record Of The Employees Is Displayed Above\n\n");
+            catch (RecordDuplicateException exp)
+            {
+                Console.WriteLine("");
+            }
+            catch(FileNotFoundException exp)
+            {
+                Console.WriteLine(exp.Message);
+            }
+
+
         }
 
         public void MoreQueries(int ChoosenValue)                               //Method for Further processing
@@ -68,6 +74,12 @@ namespace MainClassLibrary
                         SearchAllEmployee.AllEmployeeNames(EmpDetails,ManID);
                         break;
                     }
+                case 3:
+                    {
+                        Console.WriteLine("Sorted Records :\n");
+                        SortEmployee.PrintSortedCollection(EmpDetails);
+                        break;
+                    } 
                 default:
                     {
                         Console.WriteLine("Please Select A Valid Option !!!");

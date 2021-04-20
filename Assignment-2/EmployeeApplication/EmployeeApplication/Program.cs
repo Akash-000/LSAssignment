@@ -18,14 +18,11 @@ namespace EmployeeApplication
 
             //Invoking ReadingCsvFile method in ReadFile Class of the Assembly
             type.InvokeMember("ReadingCsvFile", BindingFlags.InvokeMethod, null, c, new object[] { });
-            Console.WriteLine("Press Any Key...");
-            Console.Read();
-
 
             while(true)
             {
                 Console.WriteLine("\n\nPlease Select Below Provided Options As Per The Requirement:-\n1. Search For Manager Of An Employee");
-                Console.WriteLine("2. Search For Employee Reporting To A Manager\n3. Quit");
+                Console.WriteLine("2. Search For Employee Reporting To A Manager\n3. Display Records\n4. Quit");
                 int ChoosenValue = 0;
                 try
                 {
@@ -33,11 +30,11 @@ namespace EmployeeApplication
                 }
                 catch(FormatException exp)
                 {
-                    Console.WriteLine("\n\n"+exp+"\n\n");
+                    Console.WriteLine("\n\n"+exp.Message+"\n\n");
                 }
                 
 
-                if (ChoosenValue == 3)
+                if (ChoosenValue == 4)
                     break;
 
                 //Invoking method for further processing of queries

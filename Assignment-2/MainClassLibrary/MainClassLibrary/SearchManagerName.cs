@@ -20,6 +20,11 @@ namespace MainClassLibrary
             //Getting Employee Name from the obtained Employee ID
             foreach(var record in details)
             {
+                if(ManID == -1)
+                {
+                    Console.WriteLine("The Given Employee Is The Top Manager");
+                    break;
+                }
                 if(ManID == record.EmpID)
                 {
                     Console.WriteLine("The Manager is : "+record.EmpName);

@@ -1,0 +1,6 @@
+C:\C# programs\day7\Assignment-2\EmployeeApplication\EmployeeApplication\bin\Debug\EmployeeApplication.exe.config
+C:\C# programs\day7\Assignment-2\EmployeeApplication\EmployeeApplication\bin\Debug\EmployeeApplication.exe
+C:\C# programs\day7\Assignment-2\EmployeeApplication\EmployeeApplication\bin\Debug\EmployeeApplication.pdb
+C:\C# programs\day7\Assignment-2\EmployeeApplication\EmployeeApplication\obj\Debug\EmployeeApplication.exe
+C:\C# programs\day7\Assignment-2\EmployeeApplication\EmployeeApplication\obj\Debug\EmployeeApplication.pdb
+C:\C# programs\day7\Assignment-2\EmployeeApplication\EmployeeApplication\obj\Debug\EmployeeApplication.csprojResolveAssemblyReference.cache

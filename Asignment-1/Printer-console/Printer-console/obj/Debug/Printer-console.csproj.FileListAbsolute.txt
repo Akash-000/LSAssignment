@@ -6,3 +6,6 @@ c:\users\akash.chauhan\documents\visual studio 2015\Projects\Printer-console\Pri
 c:\users\akash.chauhan\documents\visual studio 2015\Projects\Printer-console\Printer-console\obj\Debug\Printer-console.csprojResolveAssemblyReference.cache
 c:\users\akash.chauhan\documents\visual studio 2015\Projects\Printer-console\Printer-console\obj\Debug\Printer-console.exe
 c:\users\akash.chauhan\documents\visual studio 2015\Projects\Printer-console\Printer-console\obj\Debug\Printer-console.pdb
+C:\Users\akash.chauhan\Documents\GitHub\LSAssignment\Asignment-1\Printer-console\Printer-console\bin\Debug\Printer-console.exe.config
+C:\Users\akash.chauhan\Documents\GitHub\LSAssignment\Asignment-1\Printer-console\Printer-console\obj\Debug\Printer-console.exe
+C:\Users\akash.chauhan\Documents\GitHub\LSAssignment\Asignment-1\Printer-console\Printer-console\obj\Debug\Printer-console.pdb

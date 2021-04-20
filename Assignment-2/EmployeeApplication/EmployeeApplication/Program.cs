@@ -21,8 +21,30 @@ namespace EmployeeApplication
             Console.WriteLine("Press Any Key...");
             Console.Read();
 
-            //Invoking method for further processing of queries
-            type.InvokeMember("MoreQueries", BindingFlags.InvokeMethod, null, c, new object[] { });
+
+            while(true)
+            {
+                Console.WriteLine("\n\nPlease Select Below Provided Options As Per The Requirement:-\n1. Search For Manager Of An Employee");
+                Console.WriteLine("2. Search For Employee Reporting To A Manager\n3. Quit");
+                int ChoosenValue = 0;
+                try
+                {
+                    ChoosenValue = int.Parse(Console.ReadLine());
+                }
+                catch(FormatException exp)
+                {
+                    Console.WriteLine("\n\n"+exp+"\n\n");
+                }
+                
+
+                if (ChoosenValue == 3)
+                    break;
+
+                //Invoking method for further processing of queries
+
+                type.InvokeMember("MoreQueries", BindingFlags.InvokeMethod, null, c, new object[] { ChoosenValue});
+
+            }
             Console.Read();
         }
     }

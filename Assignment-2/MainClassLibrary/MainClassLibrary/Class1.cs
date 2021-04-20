@@ -46,13 +46,11 @@ namespace MainClassLibrary
             Console.WriteLine("\nThe Record Of The Employees Is Displayed Above\n\n");
         }
 
-        public void MoreQueries()                               //Method for Further processing
+        public void MoreQueries(int ChoosenValue)                               //Method for Further processing
         {
-            Console.WriteLine("Please Select Below Provided Options As Per The Requirement:-\n1. Search For Manager Of An Employee");
-            Console.WriteLine("2. Search For Employee Reporting To A Manager");
-            int choice = int.Parse(Console.ReadLine());
+            
 
-            switch(choice)
+            switch(ChoosenValue)
             {
                 case 1:
                     {

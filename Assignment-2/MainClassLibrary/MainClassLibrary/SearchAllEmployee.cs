@@ -3,7 +3,11 @@ using System.Linq;
 namespace MainClassLibrary
 {
     internal class SearchAllEmployee
-    {
+    {/// <summary>
+    /// Search All Employees Reporting Directly or indirectly to a manager
+    /// </summary>
+    /// <param name="Details"></param>
+    /// <param name="ManID"></param>
         public static void AllEmployeeNames(List<Employee> Details, int ManID)
         {
             List<string> Test = new List<string>();
@@ -20,7 +24,9 @@ namespace MainClassLibrary
                 Test.Add(emp.EmpName);
             }
             foreach(var emp in Test)
+            {
                 System.Console.WriteLine($"{emp}");
+            }
         }
     }
 }

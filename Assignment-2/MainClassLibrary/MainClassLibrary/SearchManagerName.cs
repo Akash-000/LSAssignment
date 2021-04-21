@@ -5,6 +5,11 @@ namespace MainClassLibrary
 {
     internal class SearchManagerName
     {
+        /// <summary>
+        /// Returns manager Name of an employee
+        /// </summary>
+        /// <param name="EmpID"></param>
+        /// <param name="Details"></param>
         public static void GetManagerName(int EmpID, List<Employee> Details)
         {
             var ManID = Details.Find(x => x.EmpID == EmpID);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MainClassLibrary
 {/// <summary>
-/// Class containing All String Used in the project
+/// Class containing All Strings Used in the project
 /// </summary>
     public class Constants
     {

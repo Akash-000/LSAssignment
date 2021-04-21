@@ -19,5 +19,6 @@ namespace MainClassLibrary
         public static string DuplicateExceptionMessage = " Already Exists And Hence Is Not Loaded";
         public static string TopManager = "The Given Employee Is The Top Manager";
         public static string ManagerDeclaration = "The Manager is : ";
+        public static string FilePath = "..\\..\\..\\..\\Record\\EmployeeDetails.csv";
     }
 }

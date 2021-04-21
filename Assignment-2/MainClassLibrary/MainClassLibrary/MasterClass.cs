@@ -23,7 +23,7 @@ namespace MainClassLibrary
             HashSet<int> Repetition = new HashSet<int>();
             try
             {
-                string[] Details = File.ReadAllLines("..\\..\\..\\..\\Record\\EmployeeDetails.csv");
+                string[] Details = File.ReadAllLines(Constants.FilePath);
                 foreach (var Record in Details)
                 {
                     string[] Fields = Record.Split(',');

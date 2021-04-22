@@ -11,7 +11,7 @@ namespace MainClassLibrary
         /// <summary>
         /// Collection of type Employees for further query processing
         /// </summary>
-        List<Employee> EmpDetails = new List<Employee>();
+        private List<Employee> _empDetails = new List<Employee>();
 
         /// <summary>
         /// Reads Data from CSV File, Raise an exception when duplicate records are found and Sorts the 
@@ -46,7 +46,7 @@ namespace MainClassLibrary
                     else
                     {
                         Repetition.Add(int.Parse(Fields[0]));
-                        EmpDetails.Add(emp);
+                        _empDetails.Add(emp);
                     }
                     
                 }
@@ -79,7 +79,7 @@ namespace MainClassLibrary
                             Console.Write(Constants.GetEmployeeID);
                             int EmpID = int.Parse(Console.ReadLine());
 
-                            SearchManagerName.GetManagerName(EmpID, EmpDetails);
+                            SearchManagerName.GetManagerName(EmpID, _empDetails);
                             break;
                         }
                     case 2:
@@ -87,13 +87,13 @@ namespace MainClassLibrary
                             Console.WriteLine(Constants.GetManagerID);
                             int ManID = int.Parse(Console.ReadLine());
 
-                            SearchAllEmployee.AllEmployeeNames(EmpDetails, ManID);
+                            SearchAllEmployee.AllEmployeeNames(_empDetails, ManID);
                             break;
                         }
                     case 3:
                         {
                             Console.WriteLine(Constants.SortedHeading);
-                            SortEmployee.PrintSortedCollection(EmpDetails);
+                            SortEmployee.PrintSortedCollection(_empDetails);
                             break;
                         }
                     default:

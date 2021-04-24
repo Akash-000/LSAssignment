@@ -9,6 +9,10 @@ namespace AddressBook
 {
     internal class AddRecord
     {
+        /// <summary>
+        /// Creates A Contact Object And Initialises All Its Fields
+        /// </summary>
+        /// <returns>Returns A Contact Object To Menu</returns>
         public static Contact AddDetails()
         {
             x:  Console.WriteLine(Constants.AskName);

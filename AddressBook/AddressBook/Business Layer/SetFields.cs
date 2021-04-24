@@ -8,6 +8,10 @@ namespace AddressBook
 {
     internal class SetFields
     {
+        /// <summary>
+        /// Sets private fields of PhoneNumber Class
+        /// </summary>
+        /// <returns>PhoneNumber class object</returns>
         public static PhoneNumber SetPhoneNumber()
         {
             Console.WriteLine(Constants.AskPhoneNumberLabel);
@@ -23,6 +27,10 @@ namespace AddressBook
             PhoneNumber Details = new PhoneNumber(Label, Number);
             return Details;
         }
+        /// <summary>
+        /// Sets private fields of Address Class
+        /// </summary>
+        /// <returns>Address Class Object</returns>
         public static Address SetAddress()
         {
             Console.WriteLine(Constants.AskAddressLabel);

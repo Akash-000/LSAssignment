@@ -10,6 +10,11 @@ namespace AddressBook
     {
         private string _label;
         private string _addressDetail;
+        /// <summary>
+        /// Constructor to initialise _label and _addressDetails
+        /// </summary>
+        /// <param name="label">initialises _label field</param>
+        /// <param name="address">initialises _addressDetail field</param>
         public Address(string label, string address)
         {
             this._label = label;

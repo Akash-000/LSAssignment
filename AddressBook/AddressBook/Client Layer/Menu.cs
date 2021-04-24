@@ -8,6 +8,10 @@ namespace AddressBook
 {
     internal class Menu
     {
+        /// <summary>
+        /// Provides User With Options To Use AddressBook
+        /// And Handles Each Option
+        /// </summary>
         internal static void Options()
         {
             HashSet<string> ForRepetition = new HashSet<string>();

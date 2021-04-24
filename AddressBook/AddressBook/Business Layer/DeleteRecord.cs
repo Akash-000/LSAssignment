@@ -8,6 +8,11 @@ namespace AddressBook
 {
     class DeleteRecord
     {
+        /// <summary>
+        /// Finds and delete the data or returns NoRecordFoundException if not found
+        /// </summary>
+        /// <param name="name">Name of Contact to be deleted</param>
+        /// <param name="contactList">List of contacts from which data is to be deleted</param>
         public static void RecordDelete(string name, List<Contact> contactList)
         {
             bool IsPresent = false;

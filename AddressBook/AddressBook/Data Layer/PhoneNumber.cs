@@ -10,7 +10,11 @@ namespace AddressBook
     {
         private string _label;
         private string _phoneNumber;
-
+        /// <summary>
+        /// Constructor To Initialise Private Field
+        /// </summary>
+        /// <param name="label">Initialises _label Field</param>
+        /// <param name="number">Initialises _phoneNumber Field</param>
         public PhoneNumber(string label, string number)
         {
             this._label = label;

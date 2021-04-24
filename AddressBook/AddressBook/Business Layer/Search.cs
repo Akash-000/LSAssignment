@@ -8,6 +8,13 @@ namespace AddressBook
 {
     class Search
     {
+        /// <summary>
+        /// Search and Prints data searched
+        /// prints all the records if value searched is Empty
+        /// </summary>
+        /// <param name="value">value to be searched</param>
+        /// <param name="contactList">List from which value is to be searched</param>
+        /// <param name="director">Specifies if searched Item is Name of Person or Name of Organisation</param>
         public static void SearchData(string value, List<Contact> contactList, string director)
         {
             if(value==string.Empty)

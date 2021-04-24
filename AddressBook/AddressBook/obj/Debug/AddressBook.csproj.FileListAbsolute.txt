@@ -1,0 +1,6 @@
+C:\C# programs\day 1\Project\AddressBook\AddressBook\bin\Debug\AddressBook.exe.config
+C:\C# programs\day 1\Project\AddressBook\AddressBook\bin\Debug\AddressBook.exe
+C:\C# programs\day 1\Project\AddressBook\AddressBook\bin\Debug\AddressBook.pdb
+C:\C# programs\day 1\Project\AddressBook\AddressBook\obj\Debug\AddressBook.csprojResolveAssemblyReference.cache
+C:\C# programs\day 1\Project\AddressBook\AddressBook\obj\Debug\AddressBook.exe
+C:\C# programs\day 1\Project\AddressBook\AddressBook\obj\Debug\AddressBook.pdb

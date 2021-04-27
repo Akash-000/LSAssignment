@@ -20,10 +20,18 @@ namespace AddressBook
             this._label = label;
             this._addressDetail = address;
         }
+        /// <summary>
+        /// Return label of the address
+        /// </summary>
+        /// <returns>Label of address</returns>
         public string getLabel()
         {
             return _label;
         }
+        /// <summary>
+        /// Returns address
+        /// </summary>
+        /// <returns>address of the record</returns>
         public string getAddress()
         {
             return _addressDetail;

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
 namespace AddressBook
@@ -15,60 +11,51 @@ namespace AddressBook
         /// <returns>Returns A Contact Object To Menu</returns>
         public static Contact AddDetails()
         {
-            x:  Console.WriteLine(Constants.AskName);
-            string Name = Console.ReadLine();
-            Console.WriteLine(Constants.AskOrganisationName);
-            string OrganisationName = Console.ReadLine();
-            try
+            string Name;
+            string OrganisationName;
+            GetContactDetails:  try
             {
-                long i;
-                if (Name.Length <= 0 || Name.Length > 255 || Regex.IsMatch(Name, Constants.RegEXExpression) || long.TryParse(Name, out i))
-                    throw new InvalidSyntaxException(Constants.SyntaxExceptionMessageName);
-                if (OrganisationName.Length > 255)
-                    throw new InvalidSyntaxException(Constants.OrganisationException);
+                Name = ContactDetails.TakeName();
+                OrganisationName = ContactDetails.TakeOrganisationName();
             }
             catch(InvalidSyntaxException exp)
             {
                 Console.WriteLine(exp.Message);
-                goto x;
-            }
-            if (OrganisationName == string.Empty)
-            {
-                OrganisationName = Constants.NotGiven;
+                goto GetContactDetails;
             }
             Contact NewContact = new Contact(Name, OrganisationName);
-            int N = 1;
-            y: try
+            int NumberOfInputs = 1;
+            PhoneNumberDetails: try
             {
                 Console.WriteLine(Constants.NumberOfContact);
-                N = int.Parse(Console.ReadLine());
-                while (N > 0)
+                NumberOfInputs = int.Parse(Console.ReadLine());
+                while (NumberOfInputs > 0)
                 {
                     PhoneNumber NewPhoneData = SetFields.SetPhoneNumber();
                     NewContact.addPhoneNumbers(NewPhoneData);
-                    N--;
+                    NumberOfInputs--;
                 }
             }
             catch(Exception exp)
             {
                 Console.WriteLine(exp.Message+"\n");
-                goto y;
+                goto PhoneNumberDetails;
             }
-            z: try
+            AddressDetails: try
             {
                 Console.WriteLine(Constants.NumberOfAddress);
-                N = int.Parse(Console.ReadLine());
-                while (N > 0)
+                NumberOfInputs = int.Parse(Console.ReadLine());
+                while (NumberOfInputs > 0)
                 {
                     Address NewAddressData = SetFields.SetAddress();
                     NewContact.addAddresses(NewAddressData);
-                    N--;
+                    NumberOfInputs--;
                 }
             }
             catch(Exception exp)
             {
                 Console.WriteLine(exp.Message+"\n");
-                goto z;
+                goto AddressDetails;
             }
             return NewContact;
         }

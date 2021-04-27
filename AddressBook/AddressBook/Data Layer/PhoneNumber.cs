@@ -20,10 +20,18 @@ namespace AddressBook
             this._label = label;
             this._phoneNumber = number;
         }
+        /// <summary>
+        /// return label of phonenumber
+        /// </summary>
+        /// <returns>Label of phone number</returns>
         public string getLabel()
         {
             return _label;
         }
+        /// <summary>
+        /// return the phone number
+        /// </summary>
+        /// <returns>phone number of the record</returns>
         public string getPhoneNumber()
         {
             return _phoneNumber;

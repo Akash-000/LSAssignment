@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AddressBook
 {
@@ -32,12 +29,7 @@ namespace AddressBook
                             {
                                 Console.WriteLine(Constants.OptedAddRecord);
                                 Contact NewContact = AddRecord.AddDetails();
-                                if (ForRepetition.Contains(NewContact.getName()))
-                                    throw new DuplicateRecordException(Constants.DuplicateExceptionMessage);
-                                else
-                                {
-                                    ForRepetition.Add(NewContact.getName());
-                                }
+                                Utility.RepetitionCheck(ForRepetition, NewContact.getName());
                                 AllRecords.addContact(NewContact);
                                 break;
                             }
@@ -62,16 +54,8 @@ namespace AddressBook
                                 Console.WriteLine(Constants.UpdateContactOpted);
                                 Console.WriteLine(Constants.UpdateContactName);
                                 string Name = Console.ReadLine();
-                                if (!ForRepetition.Contains(Name))
-                                {
-                                    throw new NoRecordFoundException(Constants.NoRecordFound);
-                                }
                                 Contact UpdateContact = AddRecord.AddDetails();
-                                if (Name != UpdateContact.getName() && !ForRepetition.Contains(UpdateContact.getName()))
-                                {
-                                    ForRepetition.Remove(Name);
-                                    ForRepetition.Add(UpdateContact.getName());
-                                }
+                                Utility.CheckUpdateFeasibility(ForRepetition, Name, UpdateContact.getName());
                                 AllRecords.UpdateContact(Name, UpdateContact);
                                 Console.WriteLine(Constants.UpdateConfirm);
                                 break;
